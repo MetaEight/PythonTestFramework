@@ -1,0 +1,9 @@
+{
+    "OrderPage": {
+        "first_name": "Ivan",
+        "last_name": "Ivanov",
+        "postal_code": "1234567890",
+        "order_complete_header": "THANK YOU FOR YOUR ORDER",
+        "order_complete_text": "Your order has been dispatched, and will arrive just as fast as the pony can get there!"
+    }
+}

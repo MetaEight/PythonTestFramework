@@ -1,0 +1,8 @@
+venv
+drivers/chromedriver.exe
+.idea
+pages/__pycache__
+gui_tests/__pycache__
+api_tests/__pycache__
+locators/__pycache__
+allure_results
