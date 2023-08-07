@@ -1,5 +1,5 @@
-import os
 import json
+import os
 
 
 def readJson(jsonFilePath):
@@ -9,8 +9,8 @@ def readJson(jsonFilePath):
     return jsonFile
 
 
-def get_value(attribute_name):
-    testDataPath = os.path.abspath("api_tests/test_data/API_test_data.json")
+def get_value(page, attribute_name):
+    testDataPath = os.path.abspath("utils/test_data/test_data.json")
     testDataJsonFile = readJson(testDataPath)
-    return testDataJsonFile[attribute_name]
+    return testDataJsonFile[page][attribute_name]
 

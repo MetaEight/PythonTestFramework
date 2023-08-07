@@ -1,16 +1,16 @@
-from variables import get_user, user_list, register_user
-from test_data.testData import get_value as TD
+from variables import Uri
+from utils.test_data.testData import get_value as TD
 
 
 def test_create_new_user(reqres_api):
-    user_name = TD('new_user_name')
-    user_job = TD('new_user_job')
+    user_name = TD('ApiTestData', 'new_user_name')
+    user_job = TD('ApiTestData', 'new_user_job')
 
     input_data = {
         "name": user_name,
         "job": user_job
     }
-    response = reqres_api.post(path=get_user, data=input_data)
+    response = reqres_api.post(path=Uri.get_user, data=input_data)
     responseJson = response.json()
 
     assert response.status_code == 201, f"Error, expected status code 201 instead {response.status_code}"
@@ -20,10 +20,10 @@ def test_create_new_user(reqres_api):
 
 
 def test_fetch_user(reqres_api):
-    path = f'{get_user}/2'
-    email = TD('expected_email')
-    first_name = TD('expected_first_name')
-    last_name = TD('expected_last_name')
+    path = f'{Uri.get_user}/2'
+    email = TD('ApiTestData', 'expected_email')
+    first_name = TD('ApiTestData', 'expected_first_name')
+    last_name = TD('ApiTestData', 'expected_last_name')
 
     response = reqres_api.get(path=path)
     responseJson = response.json()
@@ -36,14 +36,14 @@ def test_fetch_user(reqres_api):
 
 
 def test_get_nonexistent_user_data(reqres_api):
-    path = f'{get_user}/999'
+    path = f'{Uri.get_user}/999'
     response = reqres_api.get(path=path)
 
     assert response.status_code == 404, f"Error, expected status code 404 instead {response.status_code}"
 
 
 def test_get_list_users(reqres_api):
-    path = f'{user_list}=2'
+    path = f'{Uri.user_list}=2'
 
     response = reqres_api.get(path=path)
     responseJson = response.json()
@@ -55,14 +55,14 @@ def test_get_list_users(reqres_api):
 
 
 def test_successful_registration(reqres_api):
-    email = TD('new_user_email')
-    password = TD('new_user_password')
+    email = TD('ApiTestData', 'new_user_email')
+    password = TD('ApiTestData', 'new_user_password')
     input_data = {
         "email": email,
         "password": password
     }
 
-    response = reqres_api.post(path=register_user, data=input_data)
+    response = reqres_api.post(path=Uri.register_user, data=input_data)
     responseJson = response.json()
 
     assert response.status_code == 200, f"Error, expected status code 200 instead {response.status_code}"
@@ -70,12 +70,12 @@ def test_successful_registration(reqres_api):
 
 
 def test_unsuccessful_registration(reqres_api):
-    email = TD('new_user_email')
+    email = TD('ApiTestData', 'new_user_email')
     input_data = {
         "email": email
     }
 
-    response = reqres_api.post(path=register_user, data=input_data)
+    response = reqres_api.post(path=Uri.register_user, data=input_data)
     responseJson = response.json()
 
     assert response.status_code == 400, f"Error, expected status code 400 instead {response.status_code}"

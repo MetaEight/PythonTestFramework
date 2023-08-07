@@ -1,6 +1,6 @@
-from .BasePage import BasePage
-from locators.locators import LoginPageLocators as Locators
-from test_data import users
+from utils.pages.BasePage import BasePage
+from utils.locators.locators import LoginPageLocators as Locators
+from utils.test_data import users
 
 
 class LoginPage(BasePage):

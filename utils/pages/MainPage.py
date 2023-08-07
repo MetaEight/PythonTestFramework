@@ -1,5 +1,5 @@
-from .LoginPage import LoginPage
-from locators.locators import MainPageLocators as Locators
+from utils.pages.LoginPage import LoginPage
+from utils.locators.locators import MainPageLocators as Locators
 
 
 class MainPage(LoginPage):

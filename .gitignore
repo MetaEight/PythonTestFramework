@@ -1,8 +1,8 @@
 venv
-drivers/chromedriver.exe
 .idea
-pages/__pycache__
-gui_tests/__pycache__
-api_tests/__pycache__
-locators/__pycache__
+.pytest_cache
+utils/pages/__pycache__
+tests/gui_tests/__pycache__
+tests/api_tests/__pycache__
+utils/locators/__pycache__
 allure_results

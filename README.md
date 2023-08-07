@@ -9,7 +9,7 @@ Test Automation Framework using selenium and Python with the below features:
 * Reading locators and test data from JSON files.
 
 
-Install dependences
+Install dependencies
 =====================
 * Install Allure-framework
 * Install the depended packages in ``requirements.txt`` using ``pip install -r requirements.txt``
@@ -22,11 +22,11 @@ Run the tests
 
 Run GUI tests:
 
-``python -m pytest -v gui_tests --alluredir=allure_results``
+``python -m pytest -v -n 2 gui_tests --alluredir=allure_results``
 
 Run API tests:
 
-``python -m pytest -v api_tests --alluredir=allure_results``
+``python -m pytest -v -n 2 api_tests --alluredir=allure_results``
 
 
 Generate Allure report

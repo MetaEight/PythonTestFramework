@@ -1,5 +1,5 @@
-from .MainPage import MainPage
-from locators.locators import CartPageLocators as Locators
+from utils.pages.MainPage import MainPage
+from utils.locators.locators import CartPageLocators as Locators
 
 
 class CartPage(MainPage):

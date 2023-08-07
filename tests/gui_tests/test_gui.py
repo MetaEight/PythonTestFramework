@@ -1,9 +1,9 @@
 import allure
 import pytest
 
-from pages.LoginPage import LoginPage
-from pages.MainPage import MainPage
-from pages.OrderPage import OrderPage
+from utils.pages.LoginPage import LoginPage
+from utils.pages.MainPage import MainPage
+from utils.pages.OrderPage import OrderPage
 
 
 @pytest.mark.smoke

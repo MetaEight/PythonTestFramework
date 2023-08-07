@@ -1,6 +1,6 @@
-from .CartPage import CartPage
-from locators.locators import OrderPageLocators as Locators
-from test_data.testData import get_value as TD
+from utils.pages.CartPage import CartPage
+from utils.locators.locators import OrderPageLocators as Locators
+from utils.test_data.testData import get_value as TD
 
 
 class OrderPage(CartPage):

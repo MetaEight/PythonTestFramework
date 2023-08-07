@@ -1,9 +1,0 @@
-{
-    "new_user_name": "John",
-    "new_user_job": "qa_engineer",
-    "expected_email": "janet.weaver@reqres.in",
-    "expected_first_name": "Janet",
-    "expected_last_name": "Weaver",
-    "new_user_email": "eve.holt@reqres.in",
-    "new_user_password": "TestApiPassword"
-}
